@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: book-groupbuy-app
+    env: java
+    buildCommand: ./gradlew build
+    startCommand: ./gradlew bootRun
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: default
